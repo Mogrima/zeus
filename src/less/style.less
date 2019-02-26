@@ -1,10 +1,28 @@
 @import "fonts.less";
 @import "variables.less";
 @import "button.less";
+@import "page-title.less";
 
 @import "page-header.less";
-@import "page-title.less";
 
 @import "features.less";
 @import "slogan.less";
 @import "order.less";
+
+.visually-hidden:not(:focus):not(active),
+input[type="checkbox"].visually-hidden,
+input[type="checkbox"].visually-hidden {
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap;
+
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
