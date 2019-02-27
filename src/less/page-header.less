@@ -1,5 +1,7 @@
 .page-header {
+	min-width: 2000px;
 	background-color: @main;
+	background-image: url("../img/header-bg.jpg");
 }
 
 .page-header__wrapper {
@@ -31,6 +33,7 @@
 }
 
 .page-header__down-link {
+	position: relative;
 	display: block;
 	width: 140px;
 	margin: 0 auto;
@@ -39,4 +42,19 @@
 	line-height: 30px;
 	color: @button;
 	text-decoration: none;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 60px;
+		bottom: -10px;
+
+		width: 10px;
+		height: 10px;
+
+		border-right: 2px solid @button;
+		border-bottom: 2px solid @button;
+
+		transform: rotate(45deg);
+	}
 }
