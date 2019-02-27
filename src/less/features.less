@@ -1,4 +1,5 @@
 .features {
+	min-width: 2000px;
 	background-color: @main;
 }
 
@@ -9,18 +10,53 @@
 }
 
 .features__item {
+	position: relative;
 	padding-top: 90px;
+	padding-left: 200px;
 	&--first {
 		padding-bottom: 600px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			right: 0;
+			top: -40px;
+			width: 591px;
+			height: 634px;
+			background-image: url("../img/Photo-1.jpg");
+			background-repeat: no-repeat;
+		}
 	}
 	&--second {
-		width: 95%;
+		width: 1730px;
 		padding-bottom: 90px;
 		background-color: #232615;
+
+		&::before {
+			content: "";
+			position: absolute;
+			right: 399px;
+			top: -290px;
+			width: 232px;
+			height: 917px;
+			background-image: url("../img/Beer.png");
+			background-repeat: no-repeat;
+		}
 	}
 	&--third {
 		padding-top: 130px;
-		padding-bottom: 150px;
+		padding-bottom: 120px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			right: 0px;
+			bottom: 0px;
+			width: 980px;
+			height: 1014px;
+			background-image: url("../img/Photo-3.jpg");
+			background-repeat: no-repeat;
+		}
 	}
 }
 
@@ -49,7 +85,7 @@
 	}
 
 	&--third {
-		width: 35%;
+		width: 533px;
 		margin-bottom: 60px;
 		line-height: 90px;
 	}
@@ -65,8 +101,13 @@
 	&--brown {
 		color: @text-brown;
 	}
+
+	&--second {
+		width: 855px;
+	}
+
 	&--third {
-		width: 40%;
+		width: 685px;
 		margin-bottom: 30px;
 	}
 }
