@@ -57,4 +57,22 @@
 
 		transform: rotate(45deg);
 	}
+
+	&:hover,
+	&:focus {
+		color: saturate(@button, 40%);
+	}
+
+	&:hover::before,
+	&:focus::before {
+		border-color: saturate(@button, 40%);
+	}
+
+	&:active {
+		color: lighten(@button, 20%);
+	}
+
+	&:active::before {
+		border-color: lighten(@button, 20%);
+	}
 }
