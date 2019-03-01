@@ -13,5 +13,25 @@
 
 	&--black {
 		background-color: #1a190e;
+
+		&:hover,
+		&:focus {
+			background: darken(#1a190e, 3%);
+		}
+
+		&:active {
+			background: lighten(#1a190e, 3%);
+		}
+	}
+
+	&:hover,
+	&:focus {
+		background: darken(#272a18, 3%);
+		border-color: saturate(#404429, 10%);
+	}
+
+	&:active {
+		background: lighten(#272a18, 3%);
+		border-color: desaturate(#404429, 10%);
 	}
 }
