@@ -1,9 +1,9 @@
 .features {
 	min-width: 2000px;
-	background-color: @main;
 }
 
 .features__list {
+	position: relative;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -28,14 +28,15 @@
 		}
 	}
 	&--second {
-		width: 1730px;
-		padding-bottom: 90px;
+		position: absolute;
+		top: 367px;
+		width: 1530px;
 		background-color: #232615;
 
 		&::before {
 			content: "";
 			position: absolute;
-			right: 399px;
+			right: 200px;
 			top: -290px;
 			width: 232px;
 			height: 917px;
@@ -44,6 +45,7 @@
 		}
 	}
 	&--third {
+		margin-top: 912px;
 		padding-top: 130px;
 		padding-bottom: 120px;
 
@@ -117,5 +119,9 @@
 }
 
 .features__slogan {
-	display: none;
+	width: 2000px;
+	min-height: 884px;
+	margin-left: -200px;
+	margin-top: 92px;
+	background-image: url("../img/Photo-2.jpg");
 }
