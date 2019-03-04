@@ -1,5 +1,6 @@
 .features {
 	min-width: 2000px;
+  	
 }
 
 .features__list {
@@ -38,12 +39,26 @@
 		&::before {
 			content: "";
 			position: absolute;
+			z-index: 10;
 			right: 200px;
 			top: -290px;
 			width: 232px;
 			height: 917px;
 			background-image: url("../img/Beer.png");
 			background-repeat: no-repeat;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			right: 0;
+
+			width: 1730px;
+			height: 493px;
+
+			box-shadow: 0px 0px 155px 0px rgba(31, 33, 43, 0.65);
 		}
 	}
 	&--third {
