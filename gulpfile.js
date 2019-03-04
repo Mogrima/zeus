@@ -4,6 +4,8 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var rigger = require("gulp-rigger");
+var cssnano = require("gulp-cssnano");
+var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var server = require("browser-sync").create();
 gulp.task("html:build", function () {
@@ -20,6 +22,8 @@ gulp.task("html:build", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(cssnano())
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest("dist/css"))
     .pipe(server.stream());
 });
